@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "costgate_20260613"
+version = "0.1.0"
+description = "The CI cost gate for AI agents — predict what a prompt or tool change adds to your bill and block the merge before it ships."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = ["llm", "agents", "cost", "ci", "tokens", "budget", "github-actions"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = ["pyyaml>=6"]
+
+[project.optional-dependencies]
+exact = ["tiktoken>=0.5"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+costgate = "costgate_20260613.engine:main"
+
+[tool.setuptools]
+packages = ["costgate_20260613"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[project.urls]
+Homepage = "https://github.com/AmrElbagoury/costgate_20260613"
+Documentation = "https://github.com/AmrElbagoury/costgate_20260613#readme"
