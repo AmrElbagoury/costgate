@@ -3,7 +3,7 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "costgate_20260613"
+name = "costgate"
 version = "0.1.0"
 description = "The CI cost gate for AI agents — predict what a prompt or tool change adds to your bill and block the merge before it ships."
 readme = "README.md"
@@ -24,14 +24,14 @@ exact = ["tiktoken>=0.5"]
 dev = ["pytest>=7"]
 
 [project.scripts]
-costgate = "costgate_20260613.engine:main"
+costgate = "costgate.engine:main"
 
 [tool.setuptools]
-packages = ["costgate_20260613"]
+packages = ["costgate"]
 
 [tool.setuptools.package-dir]
 "" = "src"
 
 [project.urls]
-Homepage = "https://github.com/AmrElbagoury/costgate_20260613"
-Documentation = "https://github.com/AmrElbagoury/costgate_20260613#readme"
+Homepage = "https://github.com/AmrElbagoury/costgate"
+Documentation = "https://github.com/AmrElbagoury/costgate#readme"
